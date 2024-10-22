@@ -1,0 +1,373 @@
+:root {
+  --primary-color: #0c4a6e;
+  --secondary-color: #f59e0b;
+  --overlay-color: rgba(12, 74, 110, 0.589);
+  --dark-overlay-color: rgba(0, 0, 0, 0.5);
+  --font-family: Arial, sans-serif;
+  --btn-hover-color: #d97706;
+  --input-bg-color: #e5e7eb;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Botones */
+/*.btn {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-color);
+  border-color: var(--btn-hover-color);
+}*/
+
+/* Estilos generales */
+.bg-image {
+  background-image: url("/assets/Imagenes/IMAGEN\ HERO.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.overlay {
+  background-color: rgba(12, 74, 110, 0.514);
+  min-height: 100vh;
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#features {
+  position: relative;
+  background-image: url("./assets/Imagenes/BACKGROUND BENEFITS.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-nav {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Estilos de tarjeta */
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-overlay {
+  background: var(--overlay-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+.custom-line {
+  height: 5px;
+  background-color: #f59e0b;
+  width: 100px;
+  margin: 15px 0;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Contenedor de la cuadrícula */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  height: 400px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Elementos específicos de la cuadrícula */
+.row-span-2 {
+  grid-row: span 2;
+}
+
+.col-start-3 {
+  grid-column-start: 3;
+}
+
+.row-start-2 {
+  grid-row-start: 2;
+}
+
+.row-start-3 {
+  grid-row-start: 3;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+/* Estilos de formulario */
+.form-container {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+}
+
+.form-header {
+  background-color: #006699;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-body {
+  padding: 20px;
+}
+
+.form-control {
+  background-color: var(--input-bg-color);
+}
+
+/* Estilos del miembro del equipo */
+.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Divisores personalizados */
+.custom-divider {
+  height: 5px;
+  background-color: var(--secondary-color);
+  margin: 20px 0;
+  width: 35%;
+}
+
+.custom-blue {
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 0;
+}
+
+.custom-orange {
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 0;
+}
+
+/* Estilos específicos para la carrera */
+.career-card {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.career-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilo de superposición oscura en las tarjetas de carrera */
+.career-card .card-img-overlay {
+  background: var(--dark-overlay-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Estilos de navegación */
+.navbar,
+.text-white {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  color: white !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.team-card {
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+.team-card-img-top {
+  height: 100px;
+  object-fit: cover;
+}
+.team-member-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  z-index: 1;
+}
+.team-card-body {
+  padding-top: 60px;
+}
+footer h5 {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.testimonial-section {
+  background-color: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  margin: 50px;
+}
+
+.testimonial-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(30deg);
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.testimonial-image img:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.author-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-nav {
+  position: static;
+  margin-top: 30px;
+}
+
+.testimonial-nav [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border: none;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-nav [data-bs-target].active {
+  opacity: 1;
+  transform: scale(1.2);
+  background-color: #ff6600;
+}
+
+.carousel-item {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+h2.display-4 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .testimonial-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .author-image {
+    margin: 0 auto;
+  }
+
+  .d-flex {
+    justify-content: center;
+  }
+
+  h2.display-4 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-content {
+    padding-right: 50px;
+  }
+}
